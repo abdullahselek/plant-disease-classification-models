@@ -12,3 +12,9 @@ __version__ = "0.1.0"
 __url__ = "https://github.com/abdullahselek/plant-disease-classification-models"
 __download_url__ = "https://github.com/abdullahselek/plant-disease-classification-models"
 __description__ = "ML models for plant disease classification."
+
+from pkg_resources import resource_filename
+
+
+def model_one():
+    return resource_filename(__name__, "models/model_1.pt")
