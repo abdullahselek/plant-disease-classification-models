@@ -1,0 +1,22 @@
+language: python
+python: 3.5
+
+env:
+  - TOXENV=py38
+  - TOXENV=py37
+  - TOXENV=py36
+  - TOXENV=py35
+
+script: pip install -e .
+
+# PyPI deployment setup
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: abdullahselek
+  password:
+    secure: PYPI_SECURE_KEY
+  on:
+    tags: true
+    repo: abdullahselek/plant_disease_classification_models
+    condition: $TOXENV == py35
