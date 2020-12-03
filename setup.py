@@ -13,7 +13,7 @@ def read(filename):
     with codecs.open(os.path.join(cwd, filename), "rb", "utf-8") as h:
         return h.read()
 
-metadata = read(os.path.join(cwd, "herepy", "__init__.py"))
+metadata = read(os.path.join(cwd, "plant_disease_classification_models", "__init__.py"))
 
 def extract_metaitem(meta):
     meta_match = re.search(r"""^__{meta}__\s+=\s+['\"]([^'\"]*)['\"]""".format(meta=meta),
@@ -29,7 +29,7 @@ test_requirements = [
 ]
 
 setup(
-    name="herepy",
+    name="plant_disease_classification_models",
     version=extract_metaitem("version"),
     license=extract_metaitem("license"),
     description=extract_metaitem("description"),
@@ -47,7 +47,7 @@ setup(
     package_dir={"plant_disease_classification_models": "plant_disease_classification_models"},
     package_data={
         "plant_disease_classification_models": ["models/*.pt"]
-    }
+    },
     platforms=["Any"],
     python_requires=">=3.5",
     install_requires=requirements,
@@ -66,6 +66,5 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
     ],
 )
