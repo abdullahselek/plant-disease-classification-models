@@ -1,4 +1,6 @@
+include COPYING
 include LICENSE
-include README.rst
+include NOTICE
+include *.rst
 
-recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
+prune .DS_Store
