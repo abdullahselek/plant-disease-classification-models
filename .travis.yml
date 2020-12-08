@@ -18,5 +18,5 @@ deploy:
     secure: PYPI_SECURE_KEY
   on:
     tags: true
-    repo: abdullahselek/plant_disease_classification_models
+    repo: abdullahselek/plant-disease-classification-models
     condition: $TOXENV == py35
