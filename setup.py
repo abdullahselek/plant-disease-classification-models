@@ -51,7 +51,6 @@ setup(
     platforms=["Any"],
     python_requires=">=3.5",
     install_requires=requirements,
-    setup_requires=[],
     tests_require=test_requirements,
     zip_safe=False,
     keywords="plant disease classification, models, convolutional neural networks, cnn, pytorch",
